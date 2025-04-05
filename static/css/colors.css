@@ -1,0 +1,12 @@
+:root {
+  --accent-color:            #000000; /* Акцентний рожевий */
+  --background-color:        #EFE4DF; /* Молочний фон */
+  --text-color:              #C2B1A9; /* Звичайний текст */
+  --muted-text-color:        #888; /* Підсвічений текст */
+  --border-radius:           8px; /* Заокруглення */
+  --button-bg-color:         #FF6B6B; /* Колір фону кнопок */
+  --button-hover-bg-color:   #e64a5f; /* Колір фону кнопок при ховері */
+  --price-color:             #FF6B6B; /* Колір ціни */
+  --old-price-color:         #999; /* Колір старої ціни */
+  --text-muted-color:        #666; /* Текст для блоків на фоні */
+}

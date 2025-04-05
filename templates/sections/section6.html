@@ -1,7 +1,38 @@
-<!-- sections/section1.html -->
-<section class="py-5 bg-light" id="section1">
+<section class="" id="section6">
   <div class="container">
-    <h2 class="mb-4">shostuy екран</h2>
-    <p>Це контент першого екрану сайту. Тут можна вставити текст, зображення, кнопки тощо.</p>
+    <h2 class="mb-4 text-center" style="color= var(--accent-color)">Відгуки користувачів</h2>
+
+    <!-- Desktop grid -->
+    <div class="d-none d-md-grid comment-grid">
+      {% for comment in comments %}
+      <div class="comment-card p-3 rounded">
+        <div class="d-flex align-items-center mb-2">
+          <img src="{{ comment.avatar }}" alt="Avatar" class="avatar me-2">
+          <strong>{{ comment.name }}</strong>
+        </div>
+        <div class="comment-text">
+          <p>{{ comment.text }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Mobile carousel -->
+    <div class="d-md-none overflow-auto">
+      <div class="d-flex flex-nowrap gap-3 px-2">
+        {% for comment in comments %}
+        <div class="comment-card p-3 rounded flex-shrink-0" style="min-width: 80%">
+          <div class="comment-header d-flex align-items-center mb-2">
+            <img src="{{ comment.avatar }}" alt="Avatar" class="avatar me-2">
+            <strong>{{ comment.name }}</strong>
+          </div>
+          <div class="comment-text">
+            <p>{{ comment.text }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
   </div>
 </section>

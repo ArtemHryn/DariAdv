@@ -1,0 +1,35 @@
+<section id="section4" class="">
+  <div class="container">
+    <h2 class="text-center mb-2">Чому ви навчитесь</h2>
+    <h4 class="text-center text-secondary mb-5">Пропрацьовувати в тренінгу</h4>
+
+    <div class="">
+      {% for card_texts in cards %}
+        <div class="">
+          <div class="learn-card p-4 shadow rounded-4 h-100">
+            <div class="d-flex align-items-start">
+              <!-- Лівий блок з іконкою -->
+              <div class="me-4 text-center">
+                <img src="{{ url_for('static', filename='img/ico' + loop.index|string + '.svg') }}" alt="icon" class="learn-icon mb-2">
+                <div class="icon-text">Блок {{ loop.index }}</div>
+              </div>
+
+              <!-- Правий блок з нумерацією і текстом -->
+              <div class="ms-auto text-end learn-text-block">
+                {% for item in card_texts %}
+                  <div class="learn-item d-flex">
+                    <span class="learn-number">
+                      ~
+                    </span>
+                    <span class="learn-text">{{ item }}</span>
+                  </div>
+
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

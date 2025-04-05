@@ -1,0 +1,49 @@
+.speaker-section {
+  background-color: var(--background-color); /* Твій молочний колір */
+  color: var(--peach);           /* Твій персиковий текст */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent); /* Твій теплий рожевий */
+}
+
+.speaker-photo {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.speaker-points li {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+}
+
+.speaker-points li::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5rem;
+}
+
+.speaker-block {
+  background-color: var(--background-color); /* Використовуємо змінну */
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.speaker-text h5 {
+  font-weight: 600;
+  color: var(--accent-color); /* Використовуємо змінну */
+}
+
+.speaker-text p {
+  font-size: 16px;
+  color: var(--text-muted-color); /* Використовуємо змінну */
+}
+

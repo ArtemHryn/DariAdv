@@ -1,0 +1,64 @@
+/* Лівий блок */
+.left-block .accent-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-color); /* Використовуємо змінну */
+}
+
+.left-block .regular-text {
+  font-size: 16px;
+  color: var(--text-color); /* Використовуємо змінну */
+}
+
+.left-block .speaker-photo {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: var(--border-radius);
+}
+
+/* Правий блок */
+.right-block .start-date-box {
+  background-color: var(--accent-color); /* Використовуємо змінну */
+  color: white;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  display: inline-block;
+}
+
+.right-block .regular-text {
+  font-size: 16px;
+  color: var(--text-color); /* Використовуємо змінну */
+}
+
+.right-block .price-text {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--price-color); /* Використовуємо змінну */
+}
+
+.right-block .old-price {
+  font-size: 18px;
+  color: var(--old-price-color); /* Використовуємо змінну */
+}
+
+.right-block .btn-accent {
+  background-color: var(--button-bg-color); /* Використовуємо змінну */
+  color: white;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.right-block .btn-accent:hover {
+  background-color: var(--button-hover-bg-color); /* Використовуємо змінну */
+}
+
+.right-block .small-text {
+  font-size: 14px;
+  color: var(--muted-text-color); /* Використовуємо змінну */
+  max-width: 400px;
+  margin: 0 auto;
+}

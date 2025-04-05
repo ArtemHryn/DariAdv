@@ -1,0 +1,28 @@
+{
+  "section1": {
+    "title": "Про нас",
+    "text": "Ми команда, що створює сучасні сайти на Flask. Наш підхід — це простота, гнучкість та адаптивність. Ми прагнемо робити якісні проєкти для наших клієнтів."
+  },
+  "section2": {
+    "title": "Наші послуги",
+    "text": "Ми пропонуємо:\n- Розробку сайтів\n- Адаптивний дизайн\n- Підтримку та консультації\n\nЗвертайтесь до нас у будь-який час."
+  },
+  "footer": {
+    "firs_block": {
+      "title": "ФОП Мануйлик Дар'я Русланівна\nЄДРПОУ 3815603503",
+      "sub_title": "Всі права захищені. Будь-яке копіювання матеріалів\nдозволяється тільки з погодження правовласників"
+    },
+    "second_block": {
+      "title": "Політика конфіденційності\nПублічна оферта",
+      "title_en": "IMPORTANT: Do not enter your name and email until you have\nread the Legal Disclaimer. We are not able to make any\nguarantees and we will not make any guarantees about your\nability to generate results with our ideas, information, tools and\nresources, or strategies. You should know that all products and\nservices by our company are for educational and informational\npurposes only. Nothing on this website, or any of our websites, or\nany of our content or curriculum is a implication, promise, or\nguarantee of results. Use caution and always consult your\naccountant, lawyer or professional adviser before acting on this\nor any information related to a lifestyle change, your business\nand finances. You are responsible for your decisions, actions and\nresults. By registering on this website you agree not to attempt to\nhold us liable for your decisions, actions or results, at any time,\nunder any circumstance.",
+      "title_ua": "ВАЖЛИВО: не вводьте свою контактну інформацію, доки не\nпрочитаєте legal disclaimer. Ми не даємо жодних гарантій, що\nви досягнете якихось результатів за допомогою наших\nінструментів, стратегій або інформації. Всі продукти і сервіси\nкомпанії призначені для освітніх цілей. Жодна інформація на\nцьому сайті або будь-яких інших сайтах компанії не гарантує і\nне обіцяє отримання результатів. Ви несете відповідальність\nза свої дії і результати. Реєструючись на даному сайті, ви\nзнімаєте з нас відповідальність за ваші дії та результати."
+    },
+
+    "thirdth_block": {
+      "title": "Ми в соціальних мережах",
+      "facebook": "https://facebook.com/",
+      "instagram": "https://instagram.com/",
+      "twitter": "https://twitter.com"
+    }
+  }
+}

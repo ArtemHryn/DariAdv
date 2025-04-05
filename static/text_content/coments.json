@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Олег",
+    "avatar": "/static/images/example.jpg",
+    "text": "Дуже зручний сайт!"
+  },
+  {
+    "name": "Ірина",
+    "avatar": "/static/images/example.jpg",
+    "text": "Все працює ідеально, дякую!"
+  },
+  {
+    "name": "Максим",
+    "avatar": "/static/images/example.jpg",
+    "text": "Чудовий дизайн і простота."
+  },
+  {
+    "name": "Софія",
+    "avatar": "/static/images/example.jpg",
+    "text": "Користуватись — одне задоволення."
+  },
+  {
+    "name": "Анна",
+    "avatar": "/static/images/example.jpg",
+    "text": "Рекомендую усім своїм знайомим."
+  },
+  {
+    "name": "Тарас",
+    "avatar": "/static/images/example.jpg",
+    "text": "Супер!"
+  },
+  {
+    "name": "Олег",
+    "avatar": "/static/images/example.jpg",
+    "text": "Дуже зручний сайт!"
+  },
+  {
+    "name": "Ірина",
+    "avatar": "/static/images/example.jpg",
+    "text": "Все працює ідеально, дякую!"
+  },
+  {
+    "name": "Максим",
+    "avatar": "/static/images/example.jpg",
+    "text": "Чудовий дизайн і простота."
+  },
+  {
+    "name": "Софія",
+    "avatar": "/static/images/example.jpg",
+    "text": "Користуватись — одне задоволення."
+  },
+  {
+    "name": "Анна",
+    "avatar": "/static/images/example.jpg",
+    "text": "Рекомендую усім своїм знайомим."
+  },
+  {
+    "name": "Тарас",
+    "avatar": "/static/images/example.jpg",
+    "text": "Супер!"
+  }
+]

@@ -1,0 +1,38 @@
+.result-card {
+  width: 80%;
+  background-color: var(--background-color); /* Використовуємо змінну */
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+}
+
+.result-icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.result-text h5 {
+  font-weight: 600;
+  color: var(--accent-color); /* Використовуємо змінну */
+}
+
+.result-text p {
+  font-size: 15px;
+  color: var(--text-muted-color); /* Використовуємо змінну */
+}
+
+@media (max-width: 768px) {
+  .result-card {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .result-icon {
+    margin-bottom: 1rem;
+  }
+}
