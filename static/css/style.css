@@ -8,7 +8,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-  color: var(--heading-color);
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
 footer {
@@ -43,4 +44,14 @@ img {
     height: auto;
     border-radius: 10px;
     margin-top: 1rem;
+}
+
+.glass-card {
+  background: rgba(238, 230, 242, 0.35); /* Напівпрозорий білий */
+  backdrop-filter: blur(10px); /* Ефект скла */
+  -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }

@@ -1,0 +1,17 @@
+<section class="section2 py-5">
+  <div class="container">
+    <h2 class="section-title mb-2">{{texts.section2.title}}</h2>
+    <p class="section-subtitle mb-4">{{texts.section2.sub_title}}</p>
+
+    <div class="card-grid">
+      {% for card in texts.section2.cards %}
+        <div class="training-card">
+          <div class="card-content">
+            <h5 class="card-title">{{ card.title }}</h5>
+            <p class="card-description">{{ card.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

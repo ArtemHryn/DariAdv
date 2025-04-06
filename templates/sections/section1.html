@@ -1,22 +1,48 @@
-<section id="section1" class="">
-  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-    <!-- Лівий блок -->
-    <div class="left-block mb-4 mb-md-0">
-      <h2 class="accent-text">Акцентний текст</h2>
-      <p class="regular-text">Це текст, який не виділяється кольором, просто додатковий опис.</p>
-      <img src="{{ url_for('static', filename='images/example.jpg') }}" alt="Speaker" class="speaker-photo mt-3">
+<section id="section1" class="hero-section">
+  <div class="container py-5 position-relative">
+    <!-- Декоративні елементи -->
+    <div class="chakra-bg"></div>
+    <div class="vertical-text">карма • доля • енергія</div>
+
+    <!-- Перемикач мови -->
+    <div class="text-end mb-3">
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          {{ 'Українська' if lang == 'ua' else 'руский' }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+          <li><a class="dropdown-item" href="{{ url_for('home', lang='ua') }}">українська</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('home', lang='ru') }}">руский</a></li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Правий блок -->
-    <div class="right-block text-center text-md-start">
-      <div class="start-date-box p-3 mb-3">
-        <span>Старт 20 квітня</span>
+    <div class="row align-items-center">
+      <!-- Лівий блок (зображення) -->
+      <div class="col-lg-6 col-12 position-relative">
+        <img src="static/images/author_1.jpg" alt="Speaker" class="img-fluid speaker-photo floating-animation">
       </div>
-      <p class="regular-text">Це текст, що пояснює суть курсу чи події.</p>
-      <h3 class="price-text">Купити за <span class="price">999 грн</span></h3>
-      <h4 class="old-price text-muted"><s>9999 грн</s></h4>
-      <button class="btn btn-accent mt-4">Приєднатись до курсу</button>
-      <p class="small-text mt-3">Текст, який пояснює, чому варто приєднатися.</p>
+
+      <!-- Правий блок (текст) -->
+      <div class="col-lg-6 col-12">
+        <h1 class="main-title">
+          <span class="title-gradient">{{texts.section1.title}}</span>
+        </h1>
+
+        <div class="energy-text text-center">
+          {% for text in [texts.section1.left.one, texts.section1.left.two, texts.section1.left.thre] %}
+            <p class="">{{ text }}</p>
+          {% endfor %}
+        </div>
+
+        <div class="cta-wrapper mt-5">
+          <a href="#section4" class="cta-button pulse-animation">
+            {{texts.section1.left.btn}}
+            <svg class="spiral-arrow" viewBox="0 0 24 24"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 15l5-5-5-5"/></svg>
+          </a>
+          <p class="cta-hint">{{texts.section1.left.underbtn}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,9 +1,17 @@
 .result-card {
   width: 80%;
-  background-color: var(--background-color); /* Використовуємо змінну */
+
   border-radius: var(--border-radius);
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  background: rgba(238, 230, 242, 0.5); /* Напівпрозорий білий */
+  backdrop-filter: blur(10px); /* Ефект скла */
+  -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  color: var(--muted-text-colo);
+  padding: 2rem;
 }
 
 .result-card:hover {
@@ -22,7 +30,7 @@
 
 .result-text p {
   font-size: 15px;
-  color: var(--text-muted-color); /* Використовуємо змінну */
+  color: var(--text-color); /* Використовуємо змінну */
 }
 
 @media (max-width: 768px) {

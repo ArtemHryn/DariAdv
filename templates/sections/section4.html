@@ -1,35 +1,44 @@
-<section id="section4" class="">
+<section id="section4" class="py-5">
   <div class="container">
-    <h2 class="text-center mb-2">Чому ви навчитесь</h2>
-    <h4 class="text-center text-secondary mb-5">Пропрацьовувати в тренінгу</h4>
+    <div class="row justify-content-center">
+      <div class="custom-card col-lg-6 col-12 p-4" style="max-width: 500px;">
+        <h2 class="text-center text-accent mb-4 position-relative">
+          {{texts.section4.title}}
+          <span class="title-decoration"></span>
+        </h2>
 
-    <div class="">
-      {% for card_texts in cards %}
-        <div class="">
-          <div class="learn-card p-4 shadow rounded-4 h-100">
-            <div class="d-flex align-items-start">
-              <!-- Лівий блок з іконкою -->
-              <div class="me-4 text-center">
-                <img src="{{ url_for('static', filename='img/ico' + loop.index|string + '.svg') }}" alt="icon" class="learn-icon mb-2">
-                <div class="icon-text">Блок {{ loop.index }}</div>
-              </div>
+        <div class="mb-4">
+          <ul class="benefits-list list-unstyled">
+            {% for item in texts.section4.li %}
+            <li class="benefit-item">
+              <svg class="benefit-icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              {{ item }}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
 
-              <!-- Правий блок з нумерацією і текстом -->
-              <div class="ms-auto text-end learn-text-block">
-                {% for item in card_texts %}
-                  <div class="learn-item d-flex">
-                    <span class="learn-number">
-                      ~
-                    </span>
-                    <span class="learn-text">{{ item }}</span>
-                  </div>
-
-                {% endfor %}
-              </div>
-            </div>
+        <!-- Блок ціни (без таймера) -->
+        <div class="price-block text-center mb-4 p-3 rounded-3">
+          <div class="current-price">{{texts.section4.price}}</div>
+          <div class="d-flex justify-content-center align-items-center">
+            <span class="old-price me-2">{{texts.section4.price_old}}</span>
+            <span class="discount-badge">Sale 95%</span>
           </div>
         </div>
-      {% endfor %}
+
+        <!-- Кнопка -->
+        <div class="mb-3">
+          <a href="https://www.google.com" class="cta-button w-100">
+            {{texts.section4.btn}}
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="text-center">
+          <small><a href="{{ url_for('privacy') }}" class="privacy-link">{{texts.section4.privacy}}</a></small>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,13 +1,38 @@
-<section id="section3" class="">
+<section id="section3" class=" container my-5">
   <div class="container d-flex flex-column align-items-center">
-    <h2 class="text-center mb-5">Результат навчання</h2>
+    <h2 class="text-center mb-5">{{texts.section3.title}}</h2>
 
-    {% for item in results %}
-      <div class="result-card d-flex align-items-center mb-4">
+    {% for item in texts.section3.results %}
+      <div class="glass-card result-card  d-flex align-items-center mb-4">
         <!-- Лівий блок з іконкою -->
         <div class="result-icon me-4">
-          <img src="{{ url_for('static', filename='img/ico' + loop.index|string + '.svg') }}" alt="icon">
-        </div>
+{% if loop.index == 1 %}
+            <!-- Іконка карми (колесо) -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="currentColor"/>
+            </svg>
+          {% elif loop.index == 2 %}
+            <!-- Іконка матриці (сітка) -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M3 12H21" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 3V21" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          {% elif loop.index == 3 %}
+            <!-- Іконка зв'язку (вузол) -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 16V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          {% elif loop.index == 4 %}
+            <!-- Іконка блокування (замок) -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 11V7C8 5.34315 9.34315 4 11 4H13C14.6569 4 16 5.34315 16 7V11" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          {% endif %}        </div>
 
         <!-- Правий блок з текстом -->
         <div class="result-text">

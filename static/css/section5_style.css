@@ -1,12 +1,12 @@
 .speaker-section {
   background-color: var(--background-color); /* Твій молочний колір */
-  color: var(--peach);           /* Твій персиковий текст */
+  color: var(--text-muted-color);           /* Твій персиковий текст */
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--accent); /* Твій теплий рожевий */
+  color: var(--accent-color); /* Твій теплий рожевий */
 }
 
 .speaker-photo {
@@ -24,7 +24,7 @@
 
 .speaker-points li::before {
   content: "•";
-  color: var(--accent);
+  color: var(--accent-color);
   font-weight: bold;
   display: inline-block;
   width: 1.5rem;
@@ -47,3 +47,57 @@
   color: var(--text-muted-color); /* Використовуємо змінну */
 }
 
+/* Декоративні елементи */
+.decorative-dots {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2" fill="%236d28d9" opacity="0.1"/></svg>');
+  z-index: -1;
+}
+.decorative-dots--top {
+  top: -20px;
+  left: -20px;
+}
+.decorative-dots--bottom {
+  bottom: -20px;
+  right: -20px;
+  transform: rotate(180deg);
+}
+
+/* Лінія під заголовком */
+.title-line {
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+  margin: 1rem auto 0;
+}
+
+/* Список з іконками */
+.speaker-point {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.speaker-point:hover {
+  transform: translateX(8px);
+  border-bottom-color: var(--accent-color);
+}
+.speaker-icon {
+  color: var(--accent-color);
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+/* Фото з ефектом "енергії" */
+.speaker-photo {
+  border: 3px solid white;
+  box-shadow: 0 10px 30px rgba(109, 40, 217, 0.1);
+  transition: transform 0.5s ease;
+}
+.speaker-photo:hover {
+  transform: scale(1.02);
+}

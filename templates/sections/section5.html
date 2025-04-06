@@ -1,25 +1,38 @@
-<section class="speaker-section ">
+<section class="speaker-section container my-5">
   <div class="container">
-    <h2 class="section-title text-center ">Про спікера</h2>
-      <p class="text-center mb-5">імя авора блогу дуже довге</p>
-    <div class="row align-items-center">
+    <h2 class="section-title text-center mb-3">{{texts.section5.title}}</h2>
+    <p class="text-center mb-5 position-relative">  <!-- Додано декоративну лінію -->
+      {{texts.section5.sub_title}}
+      <span class="title-line"></span>  <!-- Лінія під текстом -->
+    </p>
 
+    <div class="row align-items-center">
       <!-- Фото спікера -->
-      <div class="col-md-5 text-center mb-4 mb-md-0">
-        <img src="{{ url_for('static', filename='images/example.jpg') }}" alt="Спікер" class="img-fluid rounded shadow speaker-photo">
+      <div class="col-md-5 text-center mb-4 mb-md-0 position-relative">
+        <img
+          src="{{ url_for('static', filename='images/author_3.jpg') }}"
+          alt="Спікер"
+          class="img-fluid rounded shadow speaker-photo"
+        >
+        <!-- Декоративні елементи -->
+        <div class="decorative-dots decorative-dots--top"></div>
+        <div class="decorative-dots decorative-dots--bottom"></div>
       </div>
 
       <!-- Текст про спікера -->
       <div class="col-md-7">
         <ul class="speaker-points list-unstyled">
-          <li>🔹 Сертифікований коуч з 10-річним досвідом.</li>
-          <li>🔹 Автор бестселера «Живи Свідомо».</li>
-          <li>🔹 Понад 5000 учасників тренінгів по всій Україні.</li>
-          <li>🔹 Веде YouTube-канал з 50+ корисними відео.</li>
-          <li>🔹 Мотивує, надихає і дає практичні знання.</li>
+          {% for item in texts.section5.li %}
+            <li class="speaker-point">
+              <svg class="speaker-icon me-3" width="24" height="24" viewBox="0 0 24 24">  <!-- Іконка -->
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      fill="currentColor"/>
+              </svg>
+              {{ item }}
+            </li>
+          {% endfor %}
         </ul>
       </div>
-
     </div>
   </div>
 </section>

@@ -1,92 +1,130 @@
-/* Основна картка */
-.learn-card {
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+/* НЕВИКОРИСТОВУЄТЬСЯ - старі стилі, які можна видалити */
+/* ... */
+
+/* Нові стилі для покращеної картки */
+.custom-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,245,255,0.95) 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(109, 40, 217, 0.15);
+  border: 1px solid rgba(109, 40, 217, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 
-/* Іконка */
-.learn-icon {
-  width: 48px;
-  height: 48px;
+.title-decoration {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
 }
 
-/* Текст під іконкою */
-.icon-text {
-  font-size: 14px;
-  color: #999;
+.benefits-list {
+  padding-left: 0;
+  color: var(--text-muted-color)
 }
-
-/* Правий блок */
-.learn-text-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-/* Один пункт */
-.learn-item {
+.benefit-item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
+  transition: all 0.3s ease;
+}
+.benefit-item:hover {
+  transform: translateX(5px);
+  color: var(--accent-color);
+}
+.benefit-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--accent-color);
+  margin-right: 12px;
+  flex-shrink: 0;
 }
 
-/* Номер */
-.learn-number {
+.price-block {
+  background-color: rgba(109, 40, 217, 0.05);
+  border: 1px dashed var(--accent-color);
+}
+.current-price {
+  font-size: 2.5rem;
   font-weight: bold;
-  font-size: 18px;
-  color: #FF6B6B; /* Акцентний теплий рожевий */
-  min-width: 32px;
-  text-align: right;
+  color: var(--accent-color);
+  line-height: 1;
+}
+.old-price {
+  font-size: 1.1rem;
+  color: var(--text-muted-color);
+  text-decoration: line-through;
+}
+.discount-badge {
+  background-color: #f0e6ff;
+  color: var(--accent-color);
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
-/* Текст */
-.learn-text {
-  font-size: 16px;
-  color: #444;
-  text-align: left;
-  max-width: 280px;
+.offer-timer {
+  background-color: #fff8f8;
+}
+.countdown {
+  font-weight: bold;
+  color: #ff4757;
+}
+.progress-bar {
+  background-color: var(--accent-color);
 }
 
-/* Адаптивність */
-@media (max-width: 768px) {
-  .learn-text-block {
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .learn-card {
-    padding: 1.5rem;
-  }
-
-  .learn-number {
-    font-size: 16px;
-  }
-
-  .learn-text {
-    font-size: 15px;
-  }
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-color), #8b5cf6);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(109, 40, 217, 0.3);
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(109, 40, 217, 0.4);
+  color: white;
+}
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+  margin-left: 8px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.cta-button:hover .arrow-icon {
+  opacity: 1;
+  transform: translateX(3px);
 }
 
-.card {
-  background-color: var(--background-color); /* Використовуємо змінну */
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.privacy-link {
+  color: var(--text-muted-color);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.privacy-link:hover {
+  color: var(--accent-color);
 }
 
-.card h5 {
-  font-weight: 600;
-  color: var(--accent-color); /* Використовуємо змінну */
+/* Анімація пульсації ціни */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
-
-.card ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.card ul li {
-  font-size: 16px;
-  color: var(--text-color); /* Використовуємо змінну */
+.pulse-animation {
+  animation: pulse 2s infinite;
 }

@@ -1,6 +1,6 @@
 :root {
-  --accent-color:            #000000; /* Акцентний рожевий */
-  --background-color:        #EFE4DF; /* Молочний фон */
+  --accent-color:            #977da8; /* Акцентний рожевий */
+  --background-color:        #FFF7ED; /* Молочний фон */
   --text-color:              #C2B1A9; /* Звичайний текст */
   --muted-text-color:        #888; /* Підсвічений текст */
   --border-radius:           8px; /* Заокруглення */
@@ -9,4 +9,5 @@
   --price-color:             #FF6B6B; /* Колір ціни */
   --old-price-color:         #999; /* Колір старої ціни */
   --text-muted-color:        #666; /* Текст для блоків на фоні */
+  --card-bg:                 #EEE6F2; /* Текст для фону карток */
 }
