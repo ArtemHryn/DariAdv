@@ -24,7 +24,7 @@ def privacy():
 
 @app.route('/offer')
 def offer():
-    return send_file('pdf/p.pdf')
+    return send_file('pdf/p.pdf')#
 
 
 if __name__ == '__main__':
