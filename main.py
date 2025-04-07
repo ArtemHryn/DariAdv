@@ -20,7 +20,7 @@ def home():
                            texts=texts, comments=comments_data, lang=lang)
 @app.route('/privacy')
 def privacy():
-    return send_file('p.pdf')
+    return send_file('pdf/p.pdf')
 
 @app.route('/offer')
 def offer():
