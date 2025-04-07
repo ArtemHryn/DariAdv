@@ -24,7 +24,7 @@ def privacy():
 
 @app.route('/offer')
 def offer():
-    return send_file('C:\\Users\\User\\PycharmProjects\\r_site_card\pdf\\p.pdf')
+    return send_file('p.pdf')
 
 
 if __name__ == '__main__':
