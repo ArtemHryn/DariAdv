@@ -11,8 +11,8 @@
           {{ 'Українська' if lang == 'ua' else 'руский' }}
         </button>
         <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-          <li><a class="dropdown-item" href="{{ url_for('home', lang='ua') }}">українська</a></li>
-          <li><a class="dropdown-item" href="{{ url_for('home', lang='ru') }}">руский</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('home', lang='ua') }}">Українська</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('home', lang='ru') }}">Русский</a></li>
         </ul>
       </div>
     </div>
@@ -35,12 +35,15 @@
           {% endfor %}
         </div>
 
-        <div class="cta-wrapper mt-5">
-          <a href="#section4" class="cta-button pulse-animation">
+        <div class="cta-wrapper mt-5 ">
+          <p class="cta-hint">{{texts.section1.left.upbtntxt}}</p>
+          <div class="d-flex justify-content-center">
+
+            <a href="#section4" class="cta-button pulse-animation">
             {{texts.section1.left.btn}}
             <svg class="spiral-arrow" viewBox="0 0 24 24"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 15l5-5-5-5"/></svg>
           </a>
-          <p class="cta-hint">{{texts.section1.left.underbtn}}</p>
+          </div>
         </div>
       </div>
     </div>

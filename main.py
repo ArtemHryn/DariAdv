@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 import json
 
 app = Flask(__name__)
@@ -18,17 +18,14 @@ def home():
     comments_data = load_json("static/text_content/coments.json")
     return render_template("index.html",
                            texts=texts, comments=comments_data, lang=lang)
-
 @app.route('/privacy')
 def privacy():
-    texts = load_json("static/text_content/locales/ua.json")
-    return render_template('privacy.html', texts=texts)
+    return send_file('pdf/p.pdf')
 
 @app.route('/offer')
 def offer():
-    texts = load_json("static/text_content/locales/ua.json")
-    return render_template('offer.html', texts=texts)
+    return send_file('C:\\Users\\User\\PycharmProjects\\r_site_card\pdf\\p.pdf')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0", port=80)
