@@ -29,14 +29,14 @@
           <span class="title-gradient">{{texts.section1.title}}</span>
         </h1>
 
-        <div class="energy-text text-center">
+        <div class=" text-center" style="color: var(--text-muted-color)">
           {% for text in [texts.section1.left.one, texts.section1.left.two, texts.section1.left.thre] %}
             <p class="">{{ text }}</p>
           {% endfor %}
         </div>
 
         <div class="cta-wrapper mt-5 ">
-          <p class="cta-hint">{{texts.section1.left.upbtntxt}}</p>
+          <p class="cta-hint" style="color: var(--accent-color); font-weight: bold">{{texts.section1.left.upbtntxt}}</p>
           <div class="d-flex justify-content-center">
 
             <a href="#section4" class="cta-button pulse-animation">
@@ -44,6 +44,7 @@
             <svg class="spiral-arrow" viewBox="0 0 24 24"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 15l5-5-5-5"/></svg>
           </a>
           </div>
+          <p class="cta-hint">{{texts.section1.left.underbtntxt}}</p>
         </div>
       </div>
     </div>
