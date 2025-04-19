@@ -1,17 +1,17 @@
-<section id="section1" class="hero-section">
-  <div class="container py-5 position-relative">
-    <!-- Перемикач мови -->
-    <div class="text-end mb-3">
-      <div class="dropdown">
-        <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          {{ 'Українська' if lang == 'ua' else 'руский' }}
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-          <li><a class="dropdown-item" href="{{ url_for('home', lang='ua') }}">Українська</a></li>
-          <li><a class="dropdown-item" href="{{ url_for('home', lang='ru') }}">Русский</a></li>
-        </ul>
+<section id="section1" class="hero-section" >
+  <div class="container py-0 position-relative">
+    <div class="d-flex flex-column align-items-center">
+      <div class="language-switcher d-inline-flex align-items-center px-3 py-1 mb-2 rounded-pill shadow-sm">
+        <a href="{{ url_for('home', lang='ua') }}" class="text-decoration-none px-2 lang-link active">UA</a>
+        <span class="divider mx-1">|</span>
+        <a href="{{ url_for('home', lang='ru') }}" class="text-decoration-none px-2 lang-link">RU</a>
       </div>
+      <hr class="mb-2 mt-2" style="width: 100%; border-top: 3px #B098C8 dashed; outline-offset: 0px">
     </div>
+    <!-- Перемикач мови -->
+
+
+
   <!-- Правий блок (заголовки, тексти, кнопка) -->
 <div class="col-lg-6 col-12 d-flex flex-column align-items-center text-center">
   <!-- Заголовок -->

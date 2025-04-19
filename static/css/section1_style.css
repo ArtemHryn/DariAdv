@@ -87,8 +87,26 @@
 }
 
 /* Центрування перемикача мови */
-.dropdown {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+<style>
+.language-switcher {
+  background: linear-gradient(to bottom, #faf3fb, #fcdffc);
+  color: #8a6c9e;
+  font-weight: 500;
 }
+
+.lang-link {
+  color: #8a6c9e;
+  transition: color 0.2s;
+}
+
+.lang-link:hover,
+.lang-link.active {
+  color: #5e4781;
+  font-weight: 600;
+}
+
+.divider {
+  color: #b79dce;
+}
+</style>
+
