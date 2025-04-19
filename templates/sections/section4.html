@@ -1,44 +1,49 @@
 <section id="section4" class="py-5">
   <div class="container">
+
     <div class="row justify-content-center">
+      <div class="mb-0 row justify-content-center">
+          <div class="title-block">
+            {{texts.section4.title}}
+          </div>
+    </div>
       <div class="custom-card col-lg-6 col-12 p-4" style="max-width: 500px;">
-        <div class="text-center text-accent mb-4 position-relative">
-          <h2 >{{texts.section4.title}} </h2>
-          <h5>《Код》</h5>
-          <span class="title-decoration"></span>
-        </div>
-
-
         <div class="mb-4">
           <ul class="benefits-list list-unstyled">
             {% for item in texts.section4.li %}
             <li class="benefit-item">
-              <svg class="benefit-icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              {{ item }}
+              <div class="me-3"> <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.896L3.54398 8.92657C4.01414 9.48667 4.87597 9.48666 5.34613 8.92657L12 1" stroke="url(#paint0_linear_1_129)" stroke-width="1.76471" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="paint0_linear_1_129" x1="1" y1="5.47485" x2="11.9985" y2="5.47485" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9072AF"/>
+                    <stop offset="1" stop-color="#C0B7E8" stop-opacity="0.53"/>
+                  </linearGradient>
+                </defs>
+              </svg></div>
+
+              <p class="price-card-text mb-0">{{ item }}</p>
             </li>
             {% endfor %}
           </ul>
         </div>
 
         <!-- Блок ціни (без таймера) -->
-        <div class="price-block text-center mb-4 p-3 rounded-3">
+        <div class="price-block text-center mb-4 p-3 rounded-4 row justify-content-center">
           <div class="current-price">{{texts.section4.price}}</div>
           <div class="d-flex justify-content-center align-items-center">
-            <span class="old-price me-2">{{texts.section4.price_old}}</span>
-            <span class="discount-badge">Sale 95%</span>
+            <span class="old-price">{{texts.section4.price_old}}</span>
+          </div>
+          <div class="sale-block text-center align-items-center mb-0">
+              <span class="text-center">{{texts.section4.price_sale}}</span>
           </div>
         </div>
 
         <!-- Кнопка -->
-        <div class="mb-3">
+        <div class="mb-0">
           <a href="https://www.google.com" class="cta-button w-100">
             {{texts.section4.btn}}
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-        </div>
-
-        <div class="text-center">
-          <small><a href="{{ url_for('privacy') }}" class="privacy-link">{{texts.section4.privacy}}</a></small>
         </div>
       </div>
     </div>

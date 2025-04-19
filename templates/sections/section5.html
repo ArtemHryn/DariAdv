@@ -1,38 +1,30 @@
-<section class="speaker-section container my-5">
-  <div class="container">
-    <h2 class="section-title text-center mb-3">{{texts.section5.title}}</h2>
-    <p class="text-center mb-5 position-relative">  <!-- Додано декоративну лінію -->
-      {{texts.section5.sub_title}}
-      <span class="title-line"></span>  <!-- Лінія під текстом -->
-    </p>
+<section>
 
-    <div class="row align-items-center">
-      <!-- Фото спікера -->
-      <div class="col-md-5 text-center mb-4 mb-md-0 position-relative">
-        <img
-          src="{{ url_for('static', filename='images/author_3.jpg') }}"
-          alt="Спікер"
-          class="img-fluid rounded shadow speaker-photo"
-        >
-        <!-- Декоративні елементи -->
-        <div class="decorative-dots decorative-dots--top"></div>
-        <div class="decorative-dots decorative-dots--bottom"></div>
-      </div>
-
-      <!-- Текст про спікера -->
+  <div class="course-leader-section">
+    <div class="d-flex justify-content-center position-absolute top-0 row">
+    <img class="sp_ico" src="static/images/sp_ico.png"/>
+    <p class="sp_title">{{texts.section5.title}}</p>
+  </div>
+    <div class="overlay-content">
+    <div class="content-wrapper">
+      <div class="info-card">
+        <div class="d-flex justify-content-between mb-2 w-100 p-3">
+          <div></div>
+          <div class="name-tag">Дарина Дупак</div>
+        </div>
+        <!-- Текст про спікера -->
       <div class="col-md-7">
-        <ul class="speaker-points list-unstyled">
+        <ul class="speaker-points">
           {% for item in texts.section5.li %}
-            <li class="speaker-point">
-              <svg class="speaker-icon me-3" width="24" height="24" viewBox="0 0 24 24">  <!-- Іконка -->
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                      fill="currentColor"/>
-              </svg>
+          <li class="styled_sp_text">
               {{ item }}
-            </li>
+          </li>
           {% endfor %}
         </ul>
       </div>
     </div>
   </div>
+  </div>
+
+
 </section>

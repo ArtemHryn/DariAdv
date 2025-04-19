@@ -3,12 +3,19 @@
 
 /* Нові стилі для покращеної картки */
 .custom-card {
-  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,245,255,0.95) 100%);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(109, 40, 217, 0.15);
-  border: 1px solid rgba(109, 40, 217, 0.1);
-  overflow: hidden;
-  position: relative;
+  border-radius: 25px;
+  background: #FFF;
+  box-shadow: 0px 6px 20.5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.price-card-text {
+    color: #9072AF;
+font-family: Gilroy;
+font-size: 17px;
+font-style: normal;
+font-weight: 500;
+line-height: 128%; /* 38.76px */
+letter-spacing: 0.17px;
 }
 
 .title-decoration {
@@ -26,7 +33,7 @@
   color: var(--text-muted-color)
 }
 .benefit-item {
-  padding: 12px 0;
+  padding: 6px 0;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   display: flex;
   align-items: center;
@@ -46,17 +53,42 @@
 
 .price-block {
   background-color: rgba(109, 40, 217, 0.05);
-  border: 1px dashed var(--accent-color);
 }
 .current-price {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--accent-color);
-  line-height: 1;
+    color: #9072AF;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 97%; /* 29.1px */
+    letter-spacing: -1.2px;
+}
+
+.sale-block {
+    border-radius: 4px;
+    background: linear-gradient(90deg, #FFA3DA 0%, #9072AF 100%);
+    width: 30% !important;
+}
+
+.sale-block span {
+    color: #FFF;
+text-align: center;
+font-family: Gilroy;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 97%; /* 11.64px */
+letter-spacing: -0.48px;
 }
 .old-price {
-  font-size: 1.1rem;
-  color: var(--text-muted-color);
+    color: #585858;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 224%; /* 26.88px */
+    letter-spacing: 0.12px;
   text-decoration: line-through;
 }
 .discount-badge {
@@ -68,15 +100,29 @@
   font-weight: bold;
 }
 
-.offer-timer {
-  background-color: #fff8f8;
-}
 .countdown {
   font-weight: bold;
   color: #ff4757;
 }
-.progress-bar {
-  background-color: var(--accent-color);
+
+.title-block{
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(90deg, #9072AF 0%, #FAA1D8 99.99%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 22.282px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170%;
+    letter-spacing: 0.223px;
+    text-transform: uppercase;
+    width: 90.3% !important;
 }
 
 .cta-button {

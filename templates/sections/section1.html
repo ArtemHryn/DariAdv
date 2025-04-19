@@ -1,9 +1,5 @@
 <section id="section1" class="hero-section">
   <div class="container py-5 position-relative">
-    <!-- Декоративні елементи -->
-    <div class="chakra-bg"></div>
-    <div class="vertical-text">карма • доля • енергія</div>
-
     <!-- Перемикач мови -->
     <div class="text-end mb-3">
       <div class="dropdown">
@@ -16,37 +12,46 @@
         </ul>
       </div>
     </div>
+  <!-- Правий блок (заголовки, тексти, кнопка) -->
+<div class="col-lg-6 col-12 d-flex flex-column align-items-center text-center">
+  <!-- Заголовок -->
+  <h1 class="main-title title-gradient mb-3">
+    {{ texts.section1.title }}
+  </h1>
+  <!-- Малий підзаголовок -->
+  <p class="small-subtitle mb-3">
+    {{ texts.section1.sub_title }}
+  </p>
 
-    <div class="row align-items-center">
-      <!-- Лівий блок (зображення) -->
-      <div class="col-lg-6 col-12 position-relative">
-        <img src="static/images/author_1.jpg" alt="Speaker" class="img-fluid speaker-photo floating-animation">
-      </div>
+  <!-- Акцентний великий фіолетовий текст -->
+  <p class="highlight-text mb-3">
+    {{ texts.section1.left.upbtntxt }}
+  </p>
 
-      <!-- Правий блок (текст) -->
-      <div class="col-lg-6 col-12">
-        <h1 class="main-title">
-          <span class="title-gradient">{{texts.section1.title}}</span>
-        </h1>
+  <!-- Сірий текст -->
+  <p class="description-text mb-4">
+    {{ texts.section1.left.two }}
+  </p>
 
-        <div class=" text-center" style="color: var(--text-muted-color)">
-          {% for text in [texts.section1.left.one, texts.section1.left.two, texts.section1.left.thre] %}
-            <p class="">{{ text }}</p>
-          {% endfor %}
-        </div>
+  <!-- Фото (залишається як є, переносимо нижче) -->
+  <div class="image-wrapper mb-4">
+    <img src="static/images/author_1.jpg" alt="Speaker" class="img-fluid speaker-photo floating-animation">
+  </div>
 
-        <div class="cta-wrapper mt-5 ">
-          <p class="cta-hint" style="color: var(--accent-color); font-weight: bold">{{texts.section1.left.upbtntxt}}</p>
-          <div class="d-flex justify-content-center">
+  <!-- Кнопка -->
+  <div class="d-flex justify-content-center mb-3" style="width: 100%;">
+    <a href="#section4" class="cta-button-1  w-85">
+      {{ texts.section1.left.btn }}
+    </a>
+  </div>
 
-            <a href="#section4" class="cta-button pulse-animation">
-            {{texts.section1.left.btn}}
-            <svg class="spiral-arrow" viewBox="0 0 24 24"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 15l5-5-5-5"/></svg>
-          </a>
-          </div>
-          <p class="cta-hint">{{texts.section1.left.underbtntxt}}</p>
-        </div>
-      </div>
-    </div>
+  <!-- Підпис під кнопкою -->
+  <p class="start-date">
+    {{ texts.section1.left.underbtntxt }}
+  </p>
+</div>
+
+
+
   </div>
 </section>
