@@ -1,34 +1,28 @@
-<section class="section6 container my-5">
-  <h2 class="section-title text-center ">{{texts.section6.title}}</h2>
-  <!-- Mobile version: horizontal scroll -->
-  <div class="d-md-none overflow-auto flex-nowrap d-flex gap-3 pb-2">
-    {% for comment in comments %}
-      <div class="comment-photo-card-mobile flex-shrink-0">
-        <img src="{{ comment.image }}" alt="Фото коментаря" class="img-fluid w-100 h-100 object-fit-cover rounded shadow-sm" style="margin-top: 0px;">
+<section id="section6" >
+
+  <div class="course-leader-section mt-5">
+    <div class="d-flex justify-content-center position-absolute top-0 row">
+    <img class="sp_ico" src="static/images/sp_ico.png"/>
+    <p class="sp_title">{{texts.section5.title}}</p>
+  </div>
+    <div class="overlay-content">
+    <div class="content-wrapper">
+      <div class="info-card mx-3">
+        <div class="d-flex justify-content-between mb-2 w-100 p-3 relative-container">
+          <div><img class="carma_phone" src="static/images/phones.png" alt="carma"></div>
+          <div class="name-tag">   Дарина Дупак   </div>
+        </div>
+        <!-- Текст про спікера -->
+      <div class="col-md-7">
+        <ul class="speaker-points">
+          {% for item in texts.section5.li %}
+          <li class="styled_sp_text mb-1">
+              {{ item }}
+          </li>
+          {% endfor %}
+        </ul>
       </div>
-    {% endfor %}
-    <!-- Last card with text + button -->
-    <div class="comment-info-card-mobile flex-shrink-0 d-flex flex-column justify-content-center align-items-center rounded shadow-sm">
-      <p class="text-center mb-2">{{texts.section6.sub_title}}</p>
-      <a href="https://google.com" class="btn btn-accent">{{texts.section6.btn}}</a>
     </div>
   </div>
-
-  <!-- Desktop version: grid + text/button below -->
-  <div class="d-none d-md-block">
-    <div class="row g-3">
-      {% for comment in comments %}
-        <div class="col-md-3">
-          <div class="comment-photo-card">
-            <img src="{{ comment.image }}" alt="Фото коментаря" class="img-fluid w-100 h-100 object-fit-cover rounded shadow-sm" style="margin-top: 0px;">
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="mt-4 d-flex justify-content-center align-items-center">
-      <p class="mb-0 me-3 text-muted">{{texts.section6.sub_title}}</p>
-      <a href="https://t.me/DariKarmaFeedback" class="btn btn-accent">{{texts.section6.btn}}</a>
-    </div>
   </div>
 </section>

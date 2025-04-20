@@ -1,89 +1,13 @@
-.course-leader-section {
-  position: relative;
-  background-image: url('../images/spp.png'); /* Замінити на шлях до зображення */
-  background-size: cover;
-  background-position: center;
 
-  padding: 80px 20px;
-  padding-top: 500px;
-  color: #333;
-  z-index: 1;
-}
 
-.sp_title {
+.container6 span {
+    color: #FFF;
     text-align: center;
     font-family: Gilroy;
-    font-size: 30px;
+    font-size: 15.931px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-
-    background: linear-gradient(180deg, #733CAA 0%, #C384E5 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.sp_ico {
-    width: 50% !important;
-    flex-shrink: 0;
-}
-
-.overlay-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  color: #6b32c7;
-  font-weight: 800;
-  margin-bottom: 40px;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  align-items: center;
-}
-
-.info-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-
-    border-radius: 25px;
-    background: #FFF;
-    box-shadow: 0px 6px 20.5px 0px rgba(0, 0, 0, 0.25);
-}
-
-.name-tag {
-  border-radius: 9px;
-    background: linear-gradient(180deg, #733CAA -25.69%, #E7A4FF 134.03%);
-  color: #FFF;
-font-family: Gilroy;
-font-size: 17.829px;
-font-style: normal;
-font-weight: 700;
-line-height: 170%;
+    font-weight: 600;
+    line-height: 130%; /* 20.711px */
+    letter-spacing: 0.159px;
 
 }
-
-.styled_sp_text {
-color: #9072AF;
-font-family: Gilroy;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 153%; /* 21.42px */
-letter-spacing: 0.14px;
-}
-
-

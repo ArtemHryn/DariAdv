@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/section4_style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/section5_style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/section6_style.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/section7_style.css') }}">
 
     <!-- Додай у <head> (Font Awesome CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -29,32 +29,35 @@
     {% block content %}{% endblock %}
     </main>
 
-    <footer class=" py-4 mt-auto custom-footer">
-      <div class="container">
-        <div class="row text-center text-md-start">
-
-          <!-- Блок 1: Текст -->
-          <div class="col-12 col-md-4 mb-4 mb-md-0">
-            <h5>  {{ texts.footer.firs_block.title  }}  </h5>
-              <p>  {{ texts.footer.firs_block.sub_title_1  }} </p>
-              <p>  {{ texts.footer.firs_block.sub_title_2  }} </p>
-              <p>  {{ texts.footer.firs_block.sub_title_3  }} </p>
+    <footer class=" py-4 mt-auto custom-footer  ">
+      <div class="container ">
+        <div class="row text-center text-md-start ">
+            <!-- Блок 3: Соцмережі -->
+            <div class="col-12 col-md-4 text-center text-md-end mb-4">
+                <h5 class="footer_txt_href">{{ texts.footer.thirdth_block.title  }}</h5>
+                 <a href="{{ texts.footer.thirdth_block.tictok  }}" class="text-black fs-4 me-3"><i class="fab fa-tiktok gradient-icon"></i></a>
+                 <a href="{{ texts.footer.thirdth_block.instagram  }}" class="text-black fs-4 me-3"><i class="fab fa-instagram gradient-icon"></i></a>
+                 <a href="{{ texts.footer.thirdth_block.telegram  }}" class="text-black fs-4"><i class="fab fa-telegram gradient-icon"></i></a>
+            </div>
+            </div>
+                <hr class="mb-2 mt-2" style="width: 100%; border-top: 3px #B098C8 dashed; outline-offset: 0px">
+      <!-- Блок 1: Текст -->
+          <div class="d-flex justify-content-center">
+              <div class="col-12 col-md-4 mb-4 mb-md-0 w-75 text-center">
+            <h5 class="footer_txt" >  {{ texts.footer.firs_block.title  }}  </h5>
+              <p class="footer_txt">  {{ texts.footer.firs_block.ipn  }} </p>
+              <p class="footer_txt">  {{ texts.footer.firs_block.sub_title_1  }} </p>
+              <p class="footer_txt">  {{ texts.footer.firs_block.sub_title_2  }} </p>
+              <p class="footer_txt">  {{ texts.footer.firs_block.sub_title_3  }} </p>
           </div>
 
-          <!-- Блок 2: Посилання -->
-          <div class="col-12 col-md-4 mb-4 mb-md-0">
-            <h5>{{ texts.footer.second_block.title  }}</h5>
-            <p><a href="{{ url_for('privacy') }}">{{texts.footer.privacy}}</a></p>
-            <p><a href="{{ url_for('offer') }}">{{texts.footer.offer}}</a></p>
           </div>
 
-          <!-- Блок 3: Соцмережі -->
-          <div class="col-12 col-md-4 text-center text-md-end">
-            <h5>{{ texts.footer.thirdth_block.title  }}</h5>
-            <a href="{{ texts.footer.thirdth_block.tictok  }}" class="text-black fs-4 me-3"><i class="fab fa-tiktok"></i></a>
-            <a href="{{ texts.footer.thirdth_block.instagram  }}" class="text-black fs-4 me-3"><i class="fab fa-instagram"></i></a>
-            <a href="{{ texts.footer.thirdth_block.telegram  }}" class="text-black fs-4"><i class="fab fa-telegram"></i></a>
+      <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+            <p><a class="footer_href" href="{{ url_for('privacy') }}">{{texts.footer.privacy}}</a></p>
+            <p><a class="footer_href" href="{{ url_for('offer') }}">{{texts.footer.offer}}</a></p>
           </div>
+      </div>
 
         </div>
       </div>
