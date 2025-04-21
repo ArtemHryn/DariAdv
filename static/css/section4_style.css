@@ -122,7 +122,7 @@ letter-spacing: -0.48px;
     line-height: 170%;
     letter-spacing: 0.223px;
     text-transform: uppercase;
-    width: 90.3% !important;
+    width: fit-content !important;
 }
 
 .cta-button {

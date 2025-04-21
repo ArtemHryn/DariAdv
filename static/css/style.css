@@ -77,3 +77,26 @@ background: radial-gradient(50% 50% at 50% 50%, #9071AF 0%, #EB81C1 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;}
+
+.section-row-wrapper {
+  display: flex;
+  flex-direction: column; /* мобілки */
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.section-row-wrapper section {
+  width: 100%;
+}
+
+/* Десктопи: 2 секції по 50% */
+@media (min-width: 992px) {
+  .section-row-wrapper {
+    flex-direction: row;
+    margin-top: 0px !important;
+  }
+
+  .section-row-wrapper section {
+    width: 50%;
+  }
+}

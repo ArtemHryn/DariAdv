@@ -108,5 +108,35 @@
 .divider {
   color: #b79dce;
 }
-</style>
+
+@media (min-width: 692px) {
+  .title-gradient {
+    font-size: 70px !important;
+    background: linear-gradient(90deg, #8749C0 0%, #FF71C7 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+}
+.small-subtitle,
+.description-text,
+.start-date {
+ font-size: 18px;
+}
+@media (min-width: 692px) {
+  .highlight-text,
+  .description-text {
+    width: 80% !important;
+    text-align: left !important;
+  }
+}
+
+  .highlight-text {
+    font-size: 30px;
+  }
+
+  .cta-button-1 {
+    font-size: 18px;
+    padding: 14px 28px;
+  }
 
