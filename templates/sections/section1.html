@@ -1,52 +1,56 @@
-<section id="section1" class="hero-section">
-  <div class="container py-5 position-relative">
-    <!-- Декоративні елементи -->
-    <div class="chakra-bg"></div>
-    <div class="vertical-text">карма • доля • енергія</div>
+<section id="section1" class="hero-section" >
+  <div class="container py-0 position-relative">
+  <!-- Перемикач мови + лінія -->
+  <div class="d-flex flex-column align-items-center">
+    <div class="language-switcher d-inline-flex align-items-center px-3 py-1 mb-2 rounded-pill shadow-sm">
+      <a href="{{ url_for('home', lang='ua') }}" class="text-decoration-none px-2 lang-link active">UA</a>
+      <span class="divider mx-1">|</span>
+      <a href="{{ url_for('home', lang='ru') }}" class="text-decoration-none px-2 lang-link">RU</a>
+    </div>
+    <hr class="mb-2 mt-2" style="width: 100%; border-top: 3px #B098C8 dashed;">
+  </div>
 
-    <!-- Перемикач мови -->
-    <div class="text-end mb-3">
-      <div class="dropdown">
-        <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          {{ 'Українська' if lang == 'ua' else 'руский' }}
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-          <li><a class="dropdown-item" href="{{ url_for('home', lang='ua') }}">Українська</a></li>
-          <li><a class="dropdown-item" href="{{ url_for('home', lang='ru') }}">Русский</a></li>
-        </ul>
+  <!-- Заголовки окремо зверху -->
+  <div class="text-center mb-4 px-3">
+    <h1 class="main-title title-gradient mb-3">
+      {{ texts.section1.title }}
+    </h1>
+    <p class="small-subtitle mx-auto">
+      {{ texts.section1.sub_title }}
+    </p>
+  </div>
+
+  <!-- Контент: лівий текст і праве фото -->
+  <div class="row align-items-center text-center text-lg-start">
+    <!-- Лівий блок -->
+    <div class="col-lg-6 d-flex flex-column align-items-center align-items-lg-start">
+      <p class="highlight-text mb-3">
+        {{ texts.section1.left.upbtntxt }}
+      </p>
+      <p class="description-text mb-4">
+        {{ texts.section1.left.two }}
+      </p>
+      <div class="d-flex justify-content-center justify-content-lg-start mb-3 w-100">
+        <a href="#section4" class="cta-button-1">
+          {{ texts.section1.left.btn }}
+        </a>
       </div>
+      <p class="start-date">
+        {{ texts.section1.left.underbtntxt }}
+      </p>
     </div>
 
-    <div class="row align-items-center">
-      <!-- Лівий блок (зображення) -->
-      <div class="col-lg-6 col-12 position-relative">
+    <!-- Правий блок -->
+    <div class="col-lg-6 d-flex justify-content-center mt-4 mt-lg-0">
+      <div class="image-wrapper">
         <img src="static/images/author_1.jpg" alt="Speaker" class="img-fluid speaker-photo floating-animation">
       </div>
-
-      <!-- Правий блок (текст) -->
-      <div class="col-lg-6 col-12">
-        <h1 class="main-title">
-          <span class="title-gradient">{{texts.section1.title}}</span>
-        </h1>
-
-        <div class=" text-center" style="color: var(--text-muted-color)">
-          {% for text in [texts.section1.left.one, texts.section1.left.two, texts.section1.left.thre] %}
-            <p class="">{{ text }}</p>
-          {% endfor %}
-        </div>
-
-        <div class="cta-wrapper mt-5 ">
-          <p class="cta-hint" style="color: var(--accent-color); font-weight: bold">{{texts.section1.left.upbtntxt}}</p>
-          <div class="d-flex justify-content-center">
-
-            <a href="#section4" class="cta-button pulse-animation">
-            {{texts.section1.left.btn}}
-            <svg class="spiral-arrow" viewBox="0 0 24 24"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 15l5-5-5-5"/></svg>
-          </a>
-          </div>
-          <p class="cta-hint">{{texts.section1.left.underbtntxt}}</p>
-        </div>
-      </div>
     </div>
+  </div>
+</div>
+
+
+
+
   </div>
 </section>

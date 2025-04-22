@@ -1,0 +1,34 @@
+<section class="section6 container my-5">
+  <h2 class="section-title text-center ">{{texts.section7.title}}</h2>
+  <!-- Mobile version: horizontal scroll -->
+  <div class="d-md-none overflow-auto flex-nowrap d-flex gap-3 pb-2">
+    {% for comment in comments %}
+      <div class="comment-photo-card-mobile flex-shrink-0">
+        <img src="{{ comment.image }}" alt="Фото коментаря" class="img-fluid w-100 h-100 object-fit-cover rounded shadow-sm" style="margin-top: 0px;">
+      </div>
+    {% endfor %}
+    <!-- Last card with text + button -->
+    <div class="comment-info-card-mobile flex-shrink-0 d-flex flex-column justify-content-center align-items-center rounded shadow-sm">
+      <p class="text-center mb-2">{{texts.section7.sub_title}}</p>
+      <a href="https://google.com" class="btn btn-accent">{{texts.section7.btn}}</a>
+    </div>
+  </div>
+
+  <!-- Desktop version: grid + text/button below -->
+  <div class="d-none d-md-block">
+    <div class="row g-3">
+      {% for comment in comments %}
+        <div class="col-md-3">
+          <div class="comment-photo-card">
+            <img src="{{ comment.image }}" alt="Фото коментаря" class="img-fluid w-100 h-100 object-fit-cover rounded shadow-sm" style="margin-top: 0px;">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="mt-4 d-flex justify-content-center align-items-center">
+      <p class="mb-0 me-3 text-muted">{{texts.section7.sub_title}}</p>
+      <a href="https://t.me/DariKarmaFeedback" class="btn btn-accent">{{texts.section7.btn}}</a>
+    </div>
+  </div>
+</section>

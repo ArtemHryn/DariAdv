@@ -45,13 +45,52 @@ img {
     border-radius: 10px;
     margin-top: 1rem;
 }
+.gradient-icon {
+  background: linear-gradient(180deg, #733CAA -25.69%, #E7A4FF 134.03%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer_txt_href {
+background: radial-gradient(50% 50% at 50% 50%, #9071AF 0%, #EB81C1 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-align: center;
+font-family: Gilroy;
+font-size: 39px;
+font-style: normal;
+font-weight: 600;
+line-height: 89%; /* 34.71px */
+letter-spacing: 0.39px;
+}
 
-.glass-card {
-  background: rgba(238, 230, 242, 0.35); /* Напівпрозорий білий */
-  backdrop-filter: blur(10px); /* Ефект скла */
-  -webkit-backdrop-filter: blur(10px); /* Для Safari */
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+.footer_txt {color: #4F4C52;
+text-align: center;
+font-family: Gilroy;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 114.286% */}
+
+.footer_href {
+background: radial-gradient(50% 50% at 50% 50%, #9071AF 0%, #EB81C1 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;}
+
+.section-row-wrapper {
+  display: flex;
+  flex-direction: column; /* мобілки */
+}
+
+/* Десктопи: 2 секції по 50% */
+@media (min-width: 992px) {
+  .section-row-wrapper {
+    flex-direction: row;
+    margin-top: 0px !important;
+  }
+
+  .section-row-wrapper section {
+    width: 50%;
+  }
 }

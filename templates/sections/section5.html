@@ -1,38 +1,13 @@
-<section class="speaker-section container my-5">
-  <div class="container">
-    <h2 class="section-title text-center mb-3">{{texts.section5.title}}</h2>
-    <p class="text-center mb-5 position-relative">  <!-- Додано декоративну лінію -->
-      {{texts.section5.sub_title}}
-      <span class="title-line"></span>  <!-- Лінія під текстом -->
-    </p>
-
-    <div class="row align-items-center">
-      <!-- Фото спікера -->
-      <div class="col-md-5 text-center mb-4 mb-md-0 position-relative">
-        <img
-          src="{{ url_for('static', filename='images/author_3.jpg') }}"
-          alt="Спікер"
-          class="img-fluid rounded shadow speaker-photo"
-        >
-        <!-- Декоративні елементи -->
-        <div class="decorative-dots decorative-dots--top"></div>
-        <div class="decorative-dots decorative-dots--bottom"></div>
-      </div>
-
-      <!-- Текст про спікера -->
-      <div class="col-md-7">
-        <ul class="speaker-points list-unstyled">
-          {% for item in texts.section5.li %}
-            <li class="speaker-point">
-              <svg class="speaker-icon me-3" width="24" height="24" viewBox="0 0 24 24">  <!-- Іконка -->
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                      fill="currentColor"/>
-              </svg>
-              {{ item }}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+<section id="section5" style="--bs-gutter-x: 0;">
+    <div class="container adaptive_cont">
+        <div class="container6 row d-flex rounded-4 justify-content-center text-center" style="background: linear-gradient(15deg, #C4BAE9 -1.21%, #C6A1CE 80.22%);">
+            <span class="title_sp6 mt-3 mb-3" style="font-size: 25px;">{{texts.section6.title}}</span>
+            <span class="sub_title_sp6 mt-1 mb-2">{{texts.section6.sub_title}}</span>
+            <div class="text-center">
+                <img src="static/images/Group.svg" alt="..." class="img-fluid">
+            </div>
+            <span class="under_txt_sp6 mb-5">{{texts.section6.under_txt}}</span>
+        </div>
     </div>
-  </div>
+
 </section>
