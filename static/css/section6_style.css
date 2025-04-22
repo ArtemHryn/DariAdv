@@ -10,6 +10,19 @@
   z-index: 1;
 }
 
+@media (min-width: 992px) {
+.course-leader-section {
+    background-image: url('../images/spp_pc.png')
+}
+.carma_phone {
+    display: None !important;
+}
+.info-card {
+    max-width: 400px;
+    align-items: start !important;
+}
+}
+
 .sp_title {
     text-align: center;
     font-family: Gilroy;
@@ -48,7 +61,7 @@
 .content-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: end;
   gap: 40px;
   align-items: center;
 }
@@ -97,5 +110,18 @@ font-weight: 500;
 line-height: 153%; /* 21.42px */
 letter-spacing: 0.14px;
 }
+
+.full-width-no-gutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
 
 

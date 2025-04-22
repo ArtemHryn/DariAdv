@@ -11,3 +11,9 @@
     letter-spacing: 0.159px;
 
 }
+
+@media (min-width: 992px) {
+.adaptive_cont{
+    max-width: 500px !important;
+}
+}

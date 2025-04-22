@@ -81,12 +81,6 @@ background-clip: text;
 .section-row-wrapper {
   display: flex;
   flex-direction: column; /* мобілки */
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.section-row-wrapper section {
-  width: 100%;
 }
 
 /* Десктопи: 2 секції по 50% */
