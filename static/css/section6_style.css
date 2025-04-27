@@ -18,7 +18,7 @@
     display: None !important;
 }
 .info-card {
-    max-width: 400px;
+    max-width: 350px;
     align-items: start !important;
 }
 }
@@ -39,7 +39,7 @@
 }
 
 .sp_ico {
-    width: 50% !important;
+    width: 10rem !important;
     flex-shrink: 0;
 }
 
@@ -122,6 +122,13 @@ letter-spacing: 0.14px;
   right: 50%;
   transform: translateX(-50%);
 }
+.sp_block_into { display: none;}
 
-
-
+@media (min-width: 992px) {
+  .sp_block_top {
+    display: none !important;
+  }
+  .sp_block_into {
+    display: flex !important;
+  }
+}

@@ -18,15 +18,6 @@ line-height: 128%; /* 38.76px */
 letter-spacing: 0.17px;
 }
 
-.title-decoration {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent-color), transparent);
-}
 
 .benefits-list {
   padding-left: 0;
@@ -42,13 +33,6 @@ letter-spacing: 0.17px;
 .benefit-item:hover {
   transform: translateX(5px);
   color: var(--accent-color);
-}
-.benefit-icon {
-  width: 24px;
-  height: 24px;
-  fill: var(--accent-color);
-  margin-right: 12px;
-  flex-shrink: 0;
 }
 
 .price-block {
@@ -91,19 +75,8 @@ letter-spacing: -0.48px;
     letter-spacing: 0.12px;
   text-decoration: line-through;
 }
-.discount-badge {
-  background-color: #f0e6ff;
-  color: var(--accent-color);
-  padding: 2px 8px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
-}
 
-.countdown {
-  font-weight: bold;
-  color: #ff4757;
-}
+
 
 .title-block{
     border-radius: 12px 12px 0 0;
@@ -129,7 +102,7 @@ letter-spacing: -0.48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--accent-color), #8b5cf6);
+  background: linear-gradient(90deg, #9072AF 0%, #FAA1D8 99.99%);
   color: white;
   padding: 14px 20px;
   border-radius: 12px;
@@ -143,34 +116,7 @@ letter-spacing: -0.48px;
   box-shadow: 0 7px 20px rgba(109, 40, 217, 0.4);
   color: white;
 }
-.arrow-icon {
-  width: 20px;
-  height: 20px;
-  stroke: white;
-  margin-left: 8px;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
 .cta-button:hover .arrow-icon {
   opacity: 1;
   transform: translateX(3px);
-}
-
-.privacy-link {
-  color: var(--text-muted-color);
-  text-decoration: underline;
-  transition: color 0.2s;
-}
-.privacy-link:hover {
-  color: var(--accent-color);
-}
-
-/* Анімація пульсації ціни */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-  100% { transform: scale(1); }
-}
-.pulse-animation {
-  animation: pulse 2s infinite;
 }
