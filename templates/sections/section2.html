@@ -1,11 +1,11 @@
 <section class="section2 py-5">
   <div class="container">
-    <h2 class="section-two-title mb-2">{{texts.section2.title}}</h2>
+    <h2 class="section-two-title mb-4">{{texts.section2.title}}</h2>
 
     <div class="card-grid">
       {% for card in texts.section2.cards %}
-        <div class="training-card" style="background:{{card.color}}; border-radius:16px;">
-          <div class="card-content">
+        <div class="training-card rounded-4" style="background:{{card.color}};">
+          <div class="card-content rounded-4">
             <p class="card-text">{{ card.description }} </p>
           </div>
         </div>

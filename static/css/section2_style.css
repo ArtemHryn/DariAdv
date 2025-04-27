@@ -11,24 +11,11 @@ font-weight: 600;
 line-height: 101%; /* 40.082px */
 letter-spacing: -1.587px;
 
-background: linear-gradient(180deg, #C384E5 0%, #B678DB 23.23%, #733CAA 56.56%, #C979B7 76.35%, #DC87BA 100%);
+background: radial-gradient(50% 50% at 50% 50%, #9071AF 0%, #EB81C1 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 
-}
-
-.section2 .section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  color: var(--accent-color);
-}
-
-.section2 .section-subtitle {
-  font-size: 1.25rem;
-  text-align: center;
-  color: var(--muted-text-color);
 }
 
 .card-grid {
@@ -40,16 +27,17 @@ background-clip: text;
 .training-card {
   display: flex;
   flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   min-height: 100%;
 }
 
 .card-content {
   flex: 1;
   padding: 1.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .card-text {
@@ -63,17 +51,12 @@ background-clip: text;
     letter-spacing: 0.14px;
 }
 
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--accent-color);
-}
+@media (min-width: 992px) {
+  .card-text {
+  font-size: 25px;
+    line-height: 28px; /* 100% */
+  }
 
-.card-description {
-  font-size: 0.95rem;
-  color: var(--text-muted-color);
-  flex-grow: 1;
 }
 
 @media (max-width: 992px) {

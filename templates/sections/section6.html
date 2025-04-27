@@ -1,27 +1,33 @@
 <section id="section6" class="full-width-no-gutter">
   <div class="course-leader-section mt-5">
-    <div class="d-flex justify-content-center position-absolute top-0">
-      <div class="row d-flex justify-content-center">
+    <div class="d-flex justify-content-center position-absolute top-0 w-100" style="left:0px;">
+      <div class="sp_block_top row d-flex justify-content-center">
         <img class="sp_ico" src="static/images/sp_ico.png"/>
         <p class="sp_title">{{texts.section5.title}}</p>
       </div>
   </div>
     <div class="overlay-content">
     <div class="content-wrapper">
-      <div class="info-card mx-3">
-        <div class="d-flex justify-content-between mb-2 w-100 p-3 relative-container">
-          <div><img class="carma_phone" src="static/images/phones.png" alt="carma"></div>
-          <div class="name-tag">   Дарина Дупак   </div>
+      <div class="d-flex row justify-content-center">
+        <div class="sp_block_into row  justify-content-center">
+          <img class="sp_ico" src="static/images/sp_ico.png"/>
+          <p class="sp_title">{{texts.section5.title}}</p>
         </div>
-        <!-- Текст про спікера -->
-      <div class="col-md-7">
-        <ul class="speaker-points">
-          {% for item in texts.section5.li %}
-          <li class="styled_sp_text mb-1">
-              {{ item }}
-          </li>
-          {% endfor %}
-        </ul>
+        <div class="info-card mx-3">
+          <div class="d-flex justify-content-between mb-2 w-100 p-3 relative-container">
+            <div><img class="carma_phone" src="static/images/phones.png" alt="carma"></div>
+            <div class="name-tag">   Дарина Дупак   </div>
+          </div>
+          <!-- Текст про спікера -->
+          <div class="">
+            <ul class="speaker-points">
+              {% for item in texts.section5.li %}
+                <li class="styled_sp_text mb-1">
+                  {{ item }}
+                </li>
+              {% endfor %}
+            </ul>
+        </div>
       </div>
     </div>
   </div>
