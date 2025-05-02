@@ -41,11 +41,34 @@
 
         <!-- Кнопка -->
         <div class="mb-0">
-          <a href="https://secure.wayforpay.com/payment/saf4c28ffb341" class="cta-button w-100">
-            {{texts.section4.btn}}
-          </a>
-        </div>
+  <a href="https://secure.wayforpay.com/payment/saf4c28ffb341"
+     class="cta-button w-100"
+     id="payment-button">
+    {{texts.section4.btn}}
+  </a>
+</div>
+
+
       </div>
     </div>
   </div>
+
+  <script>
+document.getElementById("payment-button").addEventListener("click", function(event) {
+    event.preventDefault(); // Зупиняємо миттєвий перехід
+
+    // Зберігаємо посилання
+    const targetUrl = this.href;
+
+    // Надсилаємо лог на сервер
+    fetch('/log_click', { method: 'POST' })
+        .catch(err => console.error('Logging failed:', err))
+        .finally(() => {
+            // Через ~200 мс переходимо
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 200);
+        });
+});
+</script>
 </section>
