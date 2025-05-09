@@ -1,0 +1,40 @@
+<section class="section2 py-5">
+  <div class="container text-center">
+    <div class="mb-3">
+      <div class="section-3-title">{{ texts.section4_1.title }}</div>
+    </div>
+
+    <div class="position-relative d-inline-block mb-3 media_pr">
+      <div><img class="present_ico pulse" src="static/images/p.png" alt="present"></div>
+      <img src="static/images/present.png" class="img-fluid-present" alt="Карм. фишки" >
+    </div>
+
+    <div class="text-center d-flex row justify-content-center mb-3">
+      <h5 class="pr_subtitle">{{ texts.section4_1.subtitle }}</h5>
+      <p class="small-subtitle">{{ texts.section4_1.txt }}</p>
+    </div>
+
+    <div class="text-start mx-auto" style="max-width: 400px;">
+      <div class="highlight-text mb-2" style="text-align:left;">{{ texts.section4_1.np }}</div>
+      <ul class="styled_sp_text mb-0" style="font-size: 22px;">
+        {% for item in texts.section4_1.li %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <ul class="collapse styled_sp_text" id="moreText" style="font-size: 22px;">
+        {% for item in texts.section4_1.lihide %}
+        <li>{{ item }}</li>
+        {% endfor %}
+        <p class="mt-4">{{ texts.section4_1.aprt }}</p>
+      </ul>
+    </div>
+
+    <div class="mt-3">
+  <a class="expand-link styled_sp_text" data-bs-toggle="collapse" href="#moreText" role="button" aria-expanded="false" aria-controls="moreText">
+    РАЗВЕРНУТЬ
+  </a>
+</div>
+
+
+  </div>
+</section>

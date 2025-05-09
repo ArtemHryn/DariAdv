@@ -1,0 +1,44 @@
+.present_ico{
+  position: absolute !important;
+  bottom: -10px; /* або як тобі треба */
+  left: -10px;
+  width: 75px; /* потрібний розмір */
+  z-index: 10; /* щоб була поверх інших елементів */
+}
+
+.pr_subtitle {
+    color: #9072AF;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 22px;
+    font-style: bold;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.14px;
+}
+
+.pulse {
+    animation: pulseAnim 1.5s infinite;
+  }
+
+  @keyframes pulseAnim {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.img-fluid-present {
+
+}
+
+
+@media (min-width: 992px) {
+  .media_pr {
+    max-width: 50%;
+  }
+}
